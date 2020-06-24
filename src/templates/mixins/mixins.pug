@@ -1,0 +1,3 @@
+mixin inline-svg(name)
+  +e.SVG.icon(class=name)
+    use(xlink:href=`#${name}`)
