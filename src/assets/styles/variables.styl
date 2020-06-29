@@ -1,21 +1,51 @@
 //color var
 blackColor=#000
-captionИдфсл=#3D3D3D
+captionColor=#3D3D3D
 whiteColor=#fff
-backgroundColor = 
+backgroundColor-hero = #F2F2F2
+backgroundColor-calculator = #F9F9F9
+background-foter = #222F3E
+background-content = #fff
+hoverLinkColor = #54A0FF
+buttonGreenColor = #31C437
+darkColor = #505050
 //mixin font-family font-weight
 GothamPro = 'GothamPro', sans-serif
 GothamPro-Bold = 'GothamPro-Bold', sans-serif
 GothamPro-Light = 'GothamPro-Light', sans-serif
 
 //max-width container
-width-reg = 810px
-width-main = 1770px
+width-reg = 1210px
+width-main = 1190px
 
 // breakpoints
 lg-breakpoint = 1199px 
 md-breakpoint = 992px
 sm-breakpoint = 794px
 xs-breakpoint = 540px
+
+.button
+  &--btn
+    width 202px
+    height 49px
+    border-radius 32px
+    border none
+    font-family GothamPro
+    font-size 14px
+    line-height 23px
+      
+    &:active, 
+    &:focus 
+      outline none
+    
+    &:hover
+      box-shadow inset 0px -5px 5px rgba(0, 0, 0, 0.25)
+      transition .3s
+      cursor pointer
+
+  
+  &--shadow
+    box-shadow inset 0px -3px 0px rgba(0, 0, 0, 0.25)
+
 
 

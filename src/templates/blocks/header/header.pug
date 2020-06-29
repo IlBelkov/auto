@@ -1,3 +1,45 @@
 ﻿mixin header()
-  +b.HEADER.header
-    .container
+  +b.header-content
+    +b.HEADER.header
+      .container
+        +e.logo
+          +e.logo-wrapper
+            +e.A(href='#').logo-link
+              +e.IMG(src='../../../assets/images/logo.png').image
+        
+        +e.nav.nav__
+          +e.list
+            +e.item
+              +e.A(href="#").link  Наши услуги
+            +e.item
+              +e.A(href="#").link  Расчет стоимости
+            +e.item
+              +e.A(href="#").link  Cоветы
+            +e.item
+              +e.A(href="#").link  Контакты
+            
+        +e.phone
+          +e.phone-wrapper
+            +e.A(href="tel:+79289027881").phone-link +7 (928) 902-78-81
+            
+        +b.nav-button
+          +e.SPAN.line
+          +e.SPAN.line
+          +e.SPAN.line
+
+
+    +b.HERO.hero
+      .container
+        +e.title-wrapper
+          +e.H1.title Cрочно продать<br> автомобиль после ДТП?
+        +e.caption-wrapper
+          +e.caption Выкупим Ваш автомобиль с любыми повреждениями<br> или поломкой в день обращения!
+
+        +e.buttons-block.buttons-block__
+          +e.button-wrapper
+            +e.BUTTON.button-message.button.--btn.--shadow Написать в WhatsApp
+          +e.button-wrapper
+            +e.BUTTON.button-coll.button.--btn Заказать звонок
+
+      +e.wrapper-carRunner
+        +e.IMG(src='../../../assets/images/auto.svg').carRunner
