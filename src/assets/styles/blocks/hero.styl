@@ -1,0 +1,176 @@
+.header-content
+  height 825px
+  background backgroundColor-hero url('../images/bg.svg') center right no-repeat
+  background-position 100% 124px
+
+.header
+  .container
+    margin-top 35px
+    display flex
+    justify-content space-between
+    align-items center
+
+  &__phone-link
+    font-family GothamPro
+    font-size 16px
+    line-height 23px
+    color blackColor
+    font-weight 700
+  
+  &__phone-wrapper
+    position relative
+    &:before
+      position absolute
+      content ''
+      width 20px
+      height 20px
+      background url('../images/whatsappMini.png') center no-repeat
+      top 50%
+      transform translateY(-50%)
+      left -29px
+  
+.nav-button
+  width 30px
+  height 30px
+  display none
+  justify-content center
+  align-items center
+  flex-direction column
+
+  &__line
+    background-color blackColor
+    width 30px
+    height 3px
+    margin 3px 0
+  
+
+      
+
+.nav
+  &__list
+    display flex
+    flex-direction row
+    justify-content space-between
+    
+  &__item:not(:last-child)
+    margin-right 51px
+  
+  &__link
+    font-family GothamPro
+    font-size 16px
+    line-height 23px
+    color blackColor
+    text-decoration none
+
+    &:hover
+      color hoverLinkColor
+
+.hero
+
+  .container
+    margin-top 173px
+
+  &__title
+    font-family GothamPro
+    font-size 48px
+    line-height 60px
+    color captionColor
+
+  &__caption
+    font-family GothamPro
+    font-size 16px
+    line-height 24px
+    color blackColor
+
+    &-wrapper
+      margin-top 48px 
+  
+  &__buttons-block
+    margin-top 46px
+
+  &__carRunner
+    position absolute
+    top 472px
+    right 238px
+
+.buttons-block
+  display flex
+  flex-wrap wrap
+
+  &__button-message
+    background buttonGreenColor
+    font-family GothamPro
+    font-size 14px
+    line-height 23px
+    color whiteColor
+  
+  &__button-wrapper:not(:last-child)
+    margin-right 20px
+
+  &__button-coll
+    position relative
+    background whiteColor
+    color darkColor
+    font-size 12px
+    line-height 19px
+    padding 16px 60px 19px 15px
+    box-shadow 0px 2px 3px 1px rgba(0, 0, 0, 0.25)
+
+    &:before
+      position absolute
+      background url('../images/phoneVector.png') no-repeat 50% 50% hoverLinkColor
+      box-shadow inset 0px -3px 0px rgba(0, 0, 0, 0.25)
+      border-radius 32px
+      content ''
+      width 38px
+      height 39px
+      right 5px
+      top 50%
+      transform translateY(-50%)
+        
+// mobile-styles
+
++below(md-breakpoint)
+  .header-content
+    background-image none
+  
+  .header
+    .container
+      flex-wrap wrap
+
+    &__nav
+      margin-top 20px
+      order 1
+      flex-basis 100%
+
+  
+  .hero
+    &__wrapper-carRunner
+      display none
+    
+// +below(sm-breakpoint)
++below(xs-breakpoint)
+  .header
+    &__nav,  &__phone
+      display none
+
+  .nav-button
+    display flex
+
+  .hero 
+    .container
+      margin-top 73px
+
+    &__title
+      font-size 36px
+
+  .buttons-block
+    justify-content center
+
+    &__button-wrapper:not(:last-child)
+      margin-right 0px
+      flex-basis 100%
+      text-align center
+      margin-bottom 20px
+    
+   
