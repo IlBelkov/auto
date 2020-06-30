@@ -1,0 +1,44 @@
+.info-block
+  padding-top 100px
+
+  &__section-info:not(:last-child)
+    margin-bottom 204px
+
+.section-info
+  display flex
+  justify-content space-between
+  align-items center
+
+  &__text-wrap
+
+    &-top
+      max-width 553px
+    
+    &-bottom
+      max-width 568px
+    
+  
+  &__title    
+    font-family GothamPro
+    font-size 36px
+    line-height 48px
+    color captionColor
+    margin-bottom 38px
+
+  &__text
+    font-family GothamPro
+    font-size 16px
+    line-height 30px
+    color captionColor
+
+  &__image
+    position relative
+
+    &:after
+      content ''
+      position absolute
+      background url('../images/substrate.png') center no-repeat
+      width 483px
+      height 556px
+      transform rotate(75deg)
+      top 0
