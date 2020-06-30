@@ -1,3 +1,22 @@
 mixin inline-svg(name)
   +e.SVG.icon(class=name)
     use(xlink:href=`#${name}`)
+
+mixin input(type, name, placeholder, id)
+  +e.INPUT(name=name, type=type, placeholder = placeholder, id=id?id:name).input
+
+mixin drop-area()
+  +b.drop-box
+    +e.drop-wrapper
+      +b.drop-area(id='drop-area')
+          PROGRESS.progress(id="progress-bar" max=100 value=0)
+          +b.FORM.my-form
+            +e.text Перетащите фото сюда, <br> или #[+e.button(for='fileElem') загрузите]            
+            +e.INPUT(type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)")
+    +e.count-wrapper
+      +b.add-count Добавленно #[span.value 0] штук
+
+mixin input-block(type, name, id, value, caption)
+  +e.item-wrap
+    +e.INPUT(type = type, name = name, id=id, value, checked=(caption == 'checked' ? null : undefined)).input
+    +e.LABEL(for=id).label

@@ -1,0 +1,78 @@
+.calculator
+  position relative
+  background alpha(backgroundColor-calculator,0.5) 
+
+  .container
+    padding-top 109px
+
+.slider
+  position absolute
+  left 50%
+  transform translateX(-50%)
+  top -49px
+
+.form
+  &__title
+    font-family GothamPro
+    font-size 30px
+    line-height 40px
+    color smallTitle
+  
+  &__left-wrap
+    margin-right 103px
+    max-width 504px
+  
+  &__total-data
+    margin-top 53px
+
+.profile
+  display flex
+  margin-top 61px
+  margin-bottom 27px
+
+  &__phone-wrap, &__cost-wrap
+    display flex
+    flex-wrap wrap
+  
+  &__phone-wrap
+    margin-right 16px
+
+  &__label
+    font-family GothamPro
+    font-size 12px
+    line-height 19px
+    color labelGray
+  
+  &__input
+    background #FFFFFF
+    border 1px solid #E5E5E5
+    box-sizing border-box
+    border-radius 3px
+    width 243px
+    height 45px
+    padding-left 12px
+    font-family Roboto
+    font-size 12px
+    line-height 19px
+    color darkColor
+
+.total-data
+  display flex
+  align-self center
+  justify-content space-between
+  &__sum
+    font-family GothamPro
+    font-size 24px
+    line-height 39px
+    color captionColor
+
+  &__cost
+    font-family Roboto
+    font-weight 700
+    font-size 24px
+    line-height 25px
+    margin-left 30px
+
+  &__button-request
+    background hoverLinkColor
+    color whiteColor

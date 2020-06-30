@@ -1,0 +1,70 @@
+.drop-box
+
+  &__count-wrapper
+    padding-left 21px
+    margin-top 21px
+
+.drop-area 
+  border 1px dashed hoverLinkColor
+  border-radius 5px
+  max-width 100%
+  height 172px
+  position relative
+
+#drop-area.highlight 
+  border-color rgba(84, 160, 255, 1)
+  background-color rgba(84, 160, 255, 0.3)
+
+.my-form 
+
+  &__button
+    display inline-block
+    outline 0
+    border none
+    color #54A0FF
+
+    &:hover
+      text-decoration underline
+      cursor pointer
+
+  &__text 
+    position relative
+    top 90px
+    text-align center
+    font-family GothamPro
+    text-align center
+    color smallTitle
+    font-size 12px
+    line-height 17px
+
+    &:before 
+      content ""
+      background url("../images/file-plus.png") center no-repeat
+      position absolute
+      width 29px
+      height 29px
+      top -46px
+      left 50%
+      transform translateX(-50%)
+  
+
+.add-count 
+  font-family GothamPro
+  color #54A0FF
+  position relative
+  font-size 14px
+  line-height 23px
+
+  &:before 
+    content ""
+    background url("../images/clip.png") no-repeat
+    position absolute
+    width 14px
+    height 16px
+    top 50%
+    transform translateY(-50%)
+    left -22px
+
+
+#fileElem, .progress  
+  display none

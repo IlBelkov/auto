@@ -1,0 +1,32 @@
+//- include ../mixins/mixins
+
+mixin calculator()
+  //- - let inf = [{type: 'text',name:"phone",placeholder:'+7 (919) 899-95-60'}]
+  //- - var sectionMenu = [{type: 'radio', name: 'check', id: 'rad1',value='1','checked'},{type: 'radio', name: 'check', id: 'rad1',value='1','checked'},{type: 'radio', name: 'check', id: 'rad1',value='1','checked'},{type: 'radio', name: 'check', id: 'rad1',value='1','checked'}];
+  +b.calculator
+    .container
+      +b.slider
+        +e.IMG(src='../../assets/images/slider.png').slider-item
+      +b.FORM.form
+        +e.left-wrap
+          +e.H2.title Расчитайте<br> примерную стоимость
+          +e.profile.profile__
+            +e.phone-wrap
+              +e.LABEL(for="phone").label Ваш телефон
+              +input(type,'phone','+7 (919) 899-95-60')
+            +e.cost-wrap
+              +e.LABEL(for="cost").label Рыночная стоимость автомобиля
+              +input(text,'cost','₽ 800 000')
+
+          +e.drop-area-wrap
+            +drop-area()
+
+          +e.total-data.total-data__
+            +e.sum Итого: #[+e.SPAN.cost ₽ 0]
+            +e.BUTTON.button-request.button.--btn.--shadow Отправить заявку
+        
+        +e.right-wrapper
+          +b.selection-area
+            +e.section-menu-wrap
+              +b.section-menu
+                //- +input-block(item.type, item.name, item.id, item.value,item.checked)
