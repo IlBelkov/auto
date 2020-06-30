@@ -3,7 +3,6 @@ include ../mixins/mixins
 include ../blocks/header/header
 include ../blocks/footer/footer
 include ../blocks/scripts/scripts
-include ../blocks/calculator/calculator
 
 -
   set_bemto_settings({
@@ -21,7 +20,6 @@ html(lang='en')
       include ../blocks/sprite/svg.svg
     .main-content
       +header()
-      +calculator()
       block content
       +footer()
     block scripts
