@@ -15,3 +15,8 @@ mixin drop-area()
             +e.INPUT(type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)")
     +e.count-wrapper
       +b.add-count Добавленно #[span.value 0] штук
+
+mixin input-block(type, name, id, value, caption)
+  +e.item-wrap
+    +e.INPUT(type = type, name = name, id=id, value, checked=(caption == 'checked' ? null : undefined)).input
+    +e.LABEL(for=id).label

@@ -1,5 +1,8 @@
+//- include ../mixins/mixins
+
 mixin calculator()
-  //- - let inf = [{type: 'text',name:"phone",placeholder:'+7 (919) 899-95-60'}]
+  - let inf = [{type: 'text',name:"phone",placeholder:'+7 (919) 899-95-60'}]
+  //- - var sectionMenu = [{type: 'radio', name: 'check', id: 'rad1',value='1','checked'},{type: 'radio', name: 'check', id: 'rad1',value='1','checked'},{type: 'radio', name: 'check', id: 'rad1',value='1','checked'},{type: 'radio', name: 'check', id: 'rad1',value='1','checked'}];
   +b.calculator
     .container
       +b.slider
@@ -21,7 +24,9 @@ mixin calculator()
           +e.total-data.total-data__
             +e.sum Итого: #[+e.SPAN.cost ₽ 0]
             +e.BUTTON.button-request.button.--btn.--shadow Отправить заявку
-
-
-
+        
         +e.right-wrapper
+          +b.selection-area
+            +e.section-menu-wrap
+              +b.section-menu
+                +input-block(item.type, item.name, item.id, item.value,item.checked)
