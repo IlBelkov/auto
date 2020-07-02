@@ -28,7 +28,11 @@ mixin info-block()
                     | внешними дефектами. Примем такие автомобили:
      
         +e.image-wrap
-          +e.IMG(src='../../../assets/images/infoimage.png').image
+          +b.info-signs
+            each item in infoSigns
+              +flex-item(item.img,item.caption)
+           
+             
 
 
 
