@@ -1,8 +1,12 @@
 ﻿extends ../layouts/main
 include ../blocks/calculator/calculator
-
+include ../blocks/info-block/info-block
+include ../mixins/mixins.pug
 
 block content
 
+  - let infoSigns = [{img: 'assets/images/car.png', caption: 'После ДТП'}, {img: 'assets/images/fire.png', caption: 'После пожара'}, {img: 'assets/images/bus.png', caption: 'Грузовые до 3,5 т'}, {img: 'assets/images/card.png', caption: 'Кредитные'}, {img: 'assets/images/cabriolet.png', caption: 'Любой марки'}, {img: 'assets/images/bike.png', caption: 'Мотоцикл'}]
+
   +b.page--main
     +calculator()
+    +info-block()

@@ -20,3 +20,11 @@ mixin input-block(type, name, id, value, caption)
   +e.item-wrap
     +e.INPUT(type = type, name = name, id=id, value, checked=(caption == 'checked' ? null : undefined)).input
     +e.LABEL(for=id).label
+
+mixin flex-item(img, caption)
+  +e.flex-item
+    +e.sign-wrap
+      +e.IMG(src=`${img}`).sign 
+    +e.caption= caption
+
+    
