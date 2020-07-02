@@ -12,6 +12,10 @@
   top -49px
 
 .form
+  .container
+    display flex
+    justify-content space-between
+
   &__title
     font-family GothamPro
     font-size 30px
@@ -21,6 +25,9 @@
   &__left-wrap
     margin-right 103px
     max-width 504px
+  
+  &__right-wrap
+    width 584px
   
   &__total-data
     margin-top 53px
@@ -76,3 +83,87 @@
   &__button-request
     background hoverLinkColor
     color whiteColor
+
+.section-menu
+  display flex
+  justify-content space-around
+  align-items center
+
+  &__input
+    display none
+
+    &:checked + label
+      .section-menu__icon
+        fill hoverLinkColor
+     
+  &__icon
+    fill alpha(hoverLinkColor, 0.5)
+
+.gear, .chassis
+  width 26px
+  height 26px
+
+.body
+  width 27px
+  height 21px
+
+.seat
+  width 28px
+  height 28px
+
+.flash, .repairkit
+  width 24px
+  height 24px
+
+.selection-section
+  &__section-wrap
+    width 584px
+    height 403px
+    background whiteColor
+    box-sizing border-box
+    box-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+    border-radius 10px
+  
+  &__section-header
+    display flex
+    justify-content space-between
+    align-items center
+    border 1px solid alpha(smallTitle,0.1)
+    padding-bottom 32px
+    margin-bottom 60px
+
+  &__title
+    font-family GothamPro
+    font-size 24px
+    line-height 32px
+    color smallTitle
+    font-weight 700
+  
+  &__count
+    font-family GothamPro
+    font-size 16px
+    line-height 21px
+    color alpha(smallTitle,0.3)
+  
+  &__item-wrap
+    width 230px
+    height 46px
+    background rgba(223, 237, 254, 0.3)
+    border 1.5px solid hoverLinkColor
+    box-sizing border-box
+    border-radius 30px
+    position relative
+    padding-left 21px
+  
+  &__input
+    display none
+
+  &__label
+    font-family GothamPro
+    font-size 18px
+    line-height 17px
+    color hoverLinkColor
+    position absolute
+    top 50%
+    transform translateY(-50%)
+  
