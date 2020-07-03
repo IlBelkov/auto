@@ -4,7 +4,7 @@ mixin calculator()
       +b.slider
         +e.IMG(src='../../assets/images/slider.png').slider-item
       +b.FORM.form
-        .container
+        +e.form-wrap
           +e.left-wrap
             +e.H2.title Расчитайте<br> примерную стоимость
             +e.profile.profile__
@@ -33,5 +33,16 @@ mixin calculator()
                 +e.section-header
                   +e.title Двигатель
                   +e.count Выбран #[span.section-count 1]
-                each item in sectionSelect
-                  +input-block(item.img, item.type, item.name, item.id, item.value,item.govno,item.caption)
+                +e.section-select
+                  each item in sectionSelect
+                    +input-block(item.img, item.type, item.name, item.id, item.value,item.govno,item.caption)
+
+              +e.footer-section
+                +e.reset-settings Сбросить параметры
+                +e.check-switch-wrap
+                  +b.check-switch
+                    .button-slider.prev.switch
+                    .first-switch.switch__number 01
+                    .switch__number /
+                    .last-switch.switch__number 06
+                    .button-slider.next.switch
