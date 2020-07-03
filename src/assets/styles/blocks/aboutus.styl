@@ -1,0 +1,66 @@
+.about-us
+  background backgroundColor-hero
+  .container
+    padding-top 110px
+    padding-bottom 108px
+    display flex
+    justify-content space-between
+  
+  &__image
+    align-self start
+
+  &__text-section
+    width 617px
+    height 110px
+    background whiteColor
+    border-radius 10px
+    padding-top 33px
+    padding-left 36px
+    box-shadow 0px 4px 25px rgba(0, 0, 0, 0.05)
+    position relative
+
+    &--on
+      min-height 334px
+
+    &:first-child
+      margin-bottom 13px
+
+  &__title
+    font-family GothamPro
+    font-size 18px
+    line-height 24px
+    color captionColor
+    font-weight 700
+    padding-bottom 41px
+  
+  &__text
+    max-width 539px
+    font-family GothamPro
+    font-size 16px
+    line-height 24px
+    color captionColor
+
+    &--hide
+      display none
+
+  &__button
+    position absolute
+    width 39px
+    height 39px
+    border-radius 32px
+    top 36px
+    right 42px
+    box-shadow inset 0px -3px 0px rgba(0, 0, 0, 0.25)
+
+    &:hover
+      cursor pointer
+      box-shadow inset 0px -3px 10px rgba(0, 0, 0, 0.5)
+      transition .3s
+      
+    &--plus
+      background buttonGreenColor url('../images/plus.svg') center no-repeat
+    &--minus
+      background hoverLinkColor url('../images/minus.svg') center no-repeat
+
+  
+  
