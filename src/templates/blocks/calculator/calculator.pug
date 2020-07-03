@@ -1,32 +1,48 @@
-//- include ../mixins/mixins
-
 mixin calculator()
-  //- - let inf = [{type: 'text',name:"phone",placeholder:'+7 (919) 899-95-60'}]
-  //- - var sectionMenu = [{type: 'radio', name: 'check', id: 'rad1',value='1','checked'},{type: 'radio', name: 'check', id: 'rad1',value='1','checked'},{type: 'radio', name: 'check', id: 'rad1',value='1','checked'},{type: 'radio', name: 'check', id: 'rad1',value='1','checked'}];
   +b.calculator
     .container
       +b.slider
         +e.IMG(src='../../assets/images/slider.png').slider-item
       +b.FORM.form
-        +e.left-wrap
-          +e.H2.title Расчитайте<br> примерную стоимость
-          +e.profile.profile__
-            +e.phone-wrap
-              +e.LABEL(for="phone").label Ваш телефон
-              +input(type,'phone','+7 (919) 899-95-60')
-            +e.cost-wrap
-              +e.LABEL(for="cost").label Рыночная стоимость автомобиля
-              +input(text,'cost','₽ 800 000')
+        +e.form-wrap
+          +e.left-wrap
+            +e.H2.title Расчитайте<br> примерную стоимость
+            +e.profile.profile__
+              +e.phone-wrap
+                +e.LABEL(for="phone").label Ваш телефон
+                +input(type,'phone','+7 (919) 899-95-60')
+              +e.cost-wrap
+                +e.LABEL(for="cost").label Рыночная стоимость автомобиля
+                +input(text,'cost','₽ 800 000')
 
-          +e.drop-area-wrap
-            +drop-area()
+            +e.drop-area-wrap
+              +drop-area()
 
-          +e.total-data.total-data__
-            +e.sum Итого: #[+e.SPAN.cost ₽ 0]
-            +e.BUTTON.button-request.button.--btn.--shadow Отправить заявку
-        
-        +e.right-wrapper
-          +b.selection-area
-            +e.section-menu-wrap
-              +b.section-menu
-                //- +input-block(item.type, item.name, item.id, item.value,item.checked)
+            +e.total-data.total-data__
+              +e.sum Итого: #[+e.SPAN.cost ₽ 0]
+              +e.BUTTON.button-request.button.--btn.--shadow Отправить заявку              
+          +e.right-wrap
+            +b.selection-area
+              +e.section-menu-wrap
+                +b.section-menu
+                  each item in sectionMenu
+                    +input-block(item.img, item.type, item.name, item.id, item.value,item.caption)       
+            
+            +b.selection-section
+              +e.section-wrap
+                +e.section-header
+                  +e.title Двигатель
+                  +e.count Выбран #[span.section-count 1]
+                +e.section-select
+                  each item in sectionSelect
+                    +input-block(item.img, item.type, item.name, item.id, item.value,item.govno,item.caption)
+
+              +e.footer-section
+                +e.reset-settings Сбросить параметры
+                +e.check-switch-wrap
+                  +b.check-switch
+                    .button-slider.prev.switch
+                    .first-switch.switch__number 01
+                    .switch__number /
+                    .last-switch.switch__number 06
+                    .button-slider.next.switch

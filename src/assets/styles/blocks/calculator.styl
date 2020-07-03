@@ -4,6 +4,7 @@
 
   .container
     padding-top 109px
+    padding-bottom 131px
 
 .slider
   position absolute
@@ -12,18 +13,24 @@
   top -49px
 
 .form
+  &__form-wrap
+    display flex
+    justify-content space-between
+
   &__title
     font-family GothamPro
     font-size 30px
-    line-height 40px
     color smallTitle
   
   &__left-wrap
     margin-right 103px
     max-width 504px
   
+  &__right-wrap
+    width 584px
+  
   &__total-data
-    margin-top 53px
+    margin-top 36px
 
 .profile
   display flex
@@ -76,3 +83,159 @@
   &__button-request
     background hoverLinkColor
     color whiteColor
+
+.section-menu
+  display flex
+  justify-content space-around
+  align-items center
+
+  &__input
+    display none
+
+    &:checked + label
+      .section-menu__icon
+        fill hoverLinkColor
+     
+  &__icon
+    fill alpha(hoverLinkColor, 0.5)
+
+.gear, .chassis
+  width 26px
+  height 26px
+
+.body
+  width 27px
+  height 21px
+
+.seat
+  width 28px
+  height 28px
+
+.flash, .repairkit
+  width 24px
+  height 24px
+
+.selection-section
+  &__section-wrap
+    width 584px
+    height 403px
+    background whiteColor
+    box-sizing border-box
+    box-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
+    border-radius 10px
+    padding 46px 56px 104px 56px
+  
+  &__section-header
+    display flex
+    justify-content space-between
+    align-items center
+    border-bottom 1px solid alpha(smallTitle,0.1)
+    padding-bottom 32px
+    margin-bottom 28px
+
+  &__title
+    font-family GothamPro
+    font-size 24px
+    line-height 32px
+    color smallTitle
+    font-weight 700
+  
+  &__count
+    font-family GothamPro
+    font-size 16px
+    line-height 21px
+    color alpha(smallTitle,0.3)
+  
+  &__item-wrap
+    width 230px
+    height 46px
+    background rgba(223, 237, 254, 0.3)
+    border 1.5px solid hoverLinkColor
+    box-sizing border-box
+    border-radius 30px
+    position relative
+    padding-left 21px
+
+    &:nth-child(-n+4)
+      margin-bottom 16px
+  
+  &__input
+    display none
+  
+  &__label
+    font-family GothamPro
+    font-size 18px
+    line-height 17px
+    color hoverLinkColor
+    position absolute
+    top 50%
+    transform translateY(-50%)
+  
+  &__section-select
+    display flex
+    justify-content space-between
+    align-items center
+    flex-wrap wrap
+
+  &__footer-section
+    display flex
+    justify-content space-between
+    align-items center
+    margin-top 39px
+
+  &__reset-settings
+    font-family GothamPro
+    font-size 16px
+    line-height 23px
+    color smallTitle
+    position relative
+    margin-left 30px
+
+    &:before
+      position absolute
+      content ''
+      width 22px
+      height 22px
+      background url('../images/trash.svg') center no-repeat
+      top 50%
+      left -30px
+      transform translateY(-50%)
+
+.check-switch
+  display flex
+  align-items center
+
+.button-slider
+  width 43px
+  height 43px
+  background hoverLinkColor
+  box-shadow inset 0px -3px 0px rgba(0, 0, 0, 0.25)
+  border-radius 32px
+  position relative
+
+  &:after 
+    width 14px
+    height 15px
+    left 50%
+    top 50%
+    transform translate(-50%,-50%)
+    position absolute
+    z-index 1
+    background url('../images/arrow.svg') center no-repeat
+    content ""
+
+  &:last-child
+    &:after
+      transform translate(-50%,-50%) rotate(180deg)
+
+.prev
+  margin-right 20px
+.next
+  margin-left 20px
+
+.switch__number
+  font-family GothamPro
+  font-size 16px
+  line-height 21px
+
+
