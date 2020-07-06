@@ -24,10 +24,21 @@ mixin input-block(content, type, name, id, value, caption)
     else
       +e.LABEL(for=id).label= content
 
-mixin flex-item(img, caption)
+mixin flex-item(img, caption, color)
   +e.flex-item
-    +e.sign-wrap
-      +e.IMG(src=`${img}`).sign 
+    if color== 'red' 
+      +e.sign.sign-wrap.sign-wrap--red
+        img(src=`${img}`).sign
+    else
+      +e.sign.sign-wrap.sign-wrap--blue
+        img(src=`${img}`).sign
+
     +e.caption= caption
 
-    
+mixin cards(img, title, text)
+  +e.item
+    +e.text-wrap
+      +e.title= title
+      +e.text= text
+    if img
+      +e.IMG(src=img).image
