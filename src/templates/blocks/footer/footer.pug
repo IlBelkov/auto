@@ -1,4 +1,16 @@
 mixin footer()
   +b.FOOTER.footer
     .container
-     
+      +e.menu-wrap
+        +b.footer-menu
+          +e.A(href='#').link Главная
+          +e.A(href='#').link Наши услуги
+          +e.A(href='#').link Расчеn стоимости
+          +e.A(href='#').link Советы
+          +e.A(href='#').link Контакты
+      
+      +e.social-wrap
+        +e.icon-item
+          +inline-svg('vk')
+        +e.icon-item
+          +inline-svg('inst')
