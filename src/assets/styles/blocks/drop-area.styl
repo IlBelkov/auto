@@ -3,6 +3,10 @@
   &__count-wrapper
     padding-left 21px
     margin-top 21px
+  
+  &__button-drop
+    display none
+
 
 .drop-area 
   border 1px dashed hoverLinkColor
@@ -15,9 +19,8 @@
   border-color rgba(84, 160, 255, 1)
   background-color rgba(84, 160, 255, 0.3)
 
-.my-form 
-
-  &__button
+.my-form, .my-form-small
+  &__button-drop
     display inline-block
     outline 0
     border none
@@ -45,8 +48,7 @@
       height 29px
       top -46px
       left 50%
-      transform translateX(-50%)
-  
+      transform translateX(-50%)  
 
 .add-count 
   font-family GothamPro
@@ -68,3 +70,15 @@
 
 #fileElem, .progress  
   display none
+
+.my-form-small
+  display none
+
++below(lg-breakpoint)
+  .drop-area
+    display none
+  .drop-box
+    &__button-drop
+      text-align center
+      display block
+      color hoverLinkColor

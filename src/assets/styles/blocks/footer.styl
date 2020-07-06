@@ -28,24 +28,27 @@
     &:hover
       transform translate(-50%,-50%) scale(1.5)
       cursor pointer
+      fill hoverLinkColor
+      stroke hoverLinkColor
 
- 
-  
 .footer-menu
   &__link
     font-family GothamPro
     font-size 16px
     line-height 23px
     color whiteColor 
+
+    &:hover
+      color hoverLinkColor
    
     &:not(:last-child)
       margin-right 51px
 
 .vk
-  fill footer
+  stroke footer
   width 13px
   height 8px
 .inst
-  fill footer
+  stroke footer
   width 11px
   height 11px

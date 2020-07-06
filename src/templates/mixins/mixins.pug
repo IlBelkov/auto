@@ -11,8 +11,9 @@ mixin drop-area()
       +b.drop-area(id='drop-area')
           PROGRESS.progress(id="progress-bar" max=100 value=0)
           +b.FORM.my-form
-            +e.text Перетащите фото сюда, <br> или #[+e.button(for='fileElem') загрузите]            
-            +e.INPUT(type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)")
+            +e.text Перетащите фото сюда, <br> или #[+e.button-drop(for='fileElem') загрузите]            
+            +e.INPUT(type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)")   
+      +e.button-drop(for='fileElem') Загрузите ваше фото
     +e.count-wrapper
       +b.add-count Добавленно #[span.value 0] штук
 
