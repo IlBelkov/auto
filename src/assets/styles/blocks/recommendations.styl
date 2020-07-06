@@ -1,7 +1,74 @@
 .recommendations
   padding-top 281px
   background backgroundColor-hero
+  position relative
+  padding-bottom 164px
 
+  &__about-work
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    top -237px
+
+.about-work
+  &__title
+    margin-bottom 93px
+
+.about-work-cards
+  display flex
+
+  &__item
+    width 330px
+    height 196px
+    background hoverLinkColor
+    border-radius 5px
+    padding-top 22px
+    padding-left 23px
+    padding-right 23px
+
+    &:nth-child(-n+2)
+      margin-right 100px
+
+    &:nth-child(2)
+      position relative
+
+      &:after
+        content ''
+        position absolute
+        border 1px solid #E5E5E5
+        border-radius 1px
+        top 50%
+        transform translateY(-50%)
+        left -80px
+        width 60px
+        height 2px
+      
+      &:before
+        content ''
+        position absolute
+        border 1px solid #E5E5E5
+        border-radius 1px
+        top 50%
+        transform translateY(-50%)
+        right -80px
+        width 60px
+        height 2px
+
+  &__title
+    font-family GothamPro
+    font-size 24px
+    line-height 43px
+    color whiteColor 
+    border-bottom 2px solid whiteColor
+    margin-bottom 20px 
+  
+  &__text
+    font-family GothamPro
+    font-size 14px
+    line-height 23px
+    color whiteColor 
+
+.tips
   &__block-wrapper
     display flex
     justify-content space-between
@@ -34,8 +101,9 @@
     transform translateX(-50%)
     top -71px
 
-.cards
+.tips-cards
   margin-top 137px
+  display flex
 
   &__item
     width 640px
@@ -45,17 +113,35 @@
     display flex
     justify-content space-between
     align-items center
-
-   
+    padding-left 40px
+    
     &:nth-child(1)
       background hoverLinkColor
+      margin-right 54px
     &:nth-child(2)
       background #F79F1F
+      margin-right 54px
     &:nth-child(3)
       background #A3CB38
 
+  &__title
+    font-family GothamPro
+    font-size 24px
+    line-heigh 34px
+    color whiteColor
+    max-width 264px
+  
+  &__text
+    margin-top 20px
+    font-family GothamPro
+    font-size 14px
+    line-heigh 23px
+    color whiteColor
+    max-width 315px
 
-  &__image:nth-of-type(3)
-    align-self start
+
+
+
+
 
   

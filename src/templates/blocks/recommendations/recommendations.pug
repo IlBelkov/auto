@@ -1,13 +1,25 @@
 mixin recommendations()
   - let recommendationsData = [{img: 'assets/images/money.svg', caption: 'Не соглашайтесь продавать агрегат первому покупателю или попавшейся компании. Всегда ищете второго человека либо организацию, с которой можно сравнивать цену. Запомните, 2-3 % в стоимости – это большая разница.',color: 'red'},{img: 'assets/images/man.svg', caption: 'Перед продажей перекупщикам обязательно обратитесь в независимый центр оценки стоимости авто. Заплатите немного денег, но будьте уверены, что вам не занизят стоимость автотранспорта. Не сделав этого потерять можно гораздо больше.',color: 'red'},{img: 'assets/images/washcar.svg', caption:'Конечно, на внешний вид транспорта мало обращают внимания, ведь агрегат бит, что там поймешь. Однако постарайтесь привести свою машину в максимально привлекательный вид перед продажей, так можно запросить больше денег, или хотя бы попытаться.',color: 'red'}]
-  - let cardsData = [{img: 'assets/images/bluecar.svg',title: 'Как правильно буксировать машину', text: 'Срочно продаете машину? Узнайте как быстро и эфективно подготовить автомобиль к продаже.'},{img: 'assets/images/cardmoney.svg', title: 'Стоимость переофомления авто',text: 'Срочно продаете машину? Узнайте как быстро и эфективно подготовить автомобиль к продаже.'},{img:'assets/images/greencar.svg', title: 'Как подоготовить свою машину к продаже', text: 'Срочно продаете машину? Узнайте как быстро и эфективно подготовить автомобиль к продаже.'}]
+  - let cardsData = [{img: 'assets/images/bluecar.svg',title: 'Как правильно буксировать машину', text: 'Срочно продаете машину? Узнайте как быстро и эфективно подготовить автомобиль к продаже.'},{img: 'assets/images/cardmoney.svg', title: 'Стоимость переофомления авто',text: 'Срочно продаете машину? Узнайте как быстро и эфективно подготовить автомобиль к продаже.'},{img:'assets/images/greencar.png', title: 'Как подоготовить свою машину к продаже', text: 'Срочно продаете машину? Узнайте как быстро и эфективно подготовить автомобиль к продаже.'}]
+  - let aboutWork = [{img: 'false', title: '01', text: 'При заявке с сайта или вашем звонке мы сразу оговариваем удобную вам стоимость выкупа. При нашей встречи стоимость не изменится. '},{img: 'false', title: '02', text:'Осмотр автомобиля происходит на нашей площадке. Заключаем пакетдокументов и гарантируем полную прозрачность сделки с официальной отчетностью.'},{img: 'false', title: '03', text:'Получение вами оплаты за продаваемый автомобиль происходит в течении 30 минут, на месте. Так же мы предоставляем выгодные условия trade-in'}]
+  
   +b.recommendations
-    .container
-      +e.title.title Советы при продаже
-      +e.block-wrapper
-        each item in recommendationsData
-          +flex-item(item.img,item.caption,item.color)
-        
-  +b.cards
-    each item in cardsData
-      +cards(item.img, item.title, item.text)
+    +e.about-work
+      +b.about-work
+        .container
+          +e.title.title Как мы работаем
+          +e.cards-wrapper
+            +b.about-work-cards
+              each item in aboutWork
+                +cards(item.img,item.title,item.text)
+    +e.tips-wrap
+      +b.tips
+        .container
+          +e.title.title Советы при продаже
+          +e.block-wrapper
+            each item in recommendationsData
+              +flex-item(item.img,item.caption,item.color)
+    +e.cards-wrap
+      +b.tips-cards
+        each item in cardsData
+          +cards(item.img, item.title, item.text)

@@ -40,4 +40,5 @@ mixin cards(img, title, text)
     +e.text-wrap
       +e.title= title
       +e.text= text
-    +e.IMG(src=img).image
+    if img
+      +e.IMG(src=img).image
