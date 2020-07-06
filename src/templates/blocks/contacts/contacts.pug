@@ -1,0 +1,16 @@
+mixin contacts()
+  +b.contacts
+    .container-sm
+      +e.title-wrap
+        +e.title.title Контакты
+        +e.buttons-block.buttons-block__
+          +e.button-wrapper
+            +e.BUTTON.button-message.button.--btn.--shadow Написать в WhatsApp
+          +e.button-wrapper
+            +e.BUTTON.button-coll.button.--btn Заказать звонок
+      +e.contacts-box.contacts-box__
+        +e.cell ул. Малиновского 200 д, #[br] 1-я плошадка, #[br] слева от здания Сельмаша
+        +e.cell Пн-Сб: с 9:00 до 20:00 #[br] Вс: c 11:00 до 16:00
+        +e.cell +7 (863) 221-59-55 #[br] sell@vikupauto.ru
+    +e.map-wrap
+      +e.IFRAME(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d43381.12923916624!2d39.67797410685336!3d47.19073760049537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1594034391884!5m2!1sru!2sru").map
