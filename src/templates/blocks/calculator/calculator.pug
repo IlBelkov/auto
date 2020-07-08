@@ -20,7 +20,9 @@ mixin calculator()
               +drop-area()
 
             +e.total-data.total-data__
-              +e.sum Итого: #[+e.SPAN.cost ₽ 0]
+              +e.cost-wrap
+                +e.sum Итого: 
+                +e.SPAN.cost ₽ 0
               +e.BUTTON.button-request.button.--btn.--shadow Отправить заявку              
           +e.right-wrap
             +b.selection-area
@@ -31,7 +33,7 @@ mixin calculator()
             
             +b.selection-section
               +e.section-wrap
-                +e.section-header
+                +e.header
                   +e.title Двигатель
                   +e.count Выбран #[span.section-count 1]
                 +e.section-select

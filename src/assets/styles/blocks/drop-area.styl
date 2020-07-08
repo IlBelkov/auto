@@ -57,6 +57,10 @@
   font-size 14px
   line-height 23px
 
+  &:hover
+    cursor pointer
+    text-decoration underline
+
   &:before 
     content ""
     background url("../images/clip.png") no-repeat
@@ -82,3 +86,13 @@
       text-align center
       display block
       color hoverLinkColor
+
++below(xs-breakpoint)
+  .drop-box
+    &__count-wrapper
+      padding-left 0
+
+  .add-count
+    text-align center
+    &:before
+      display none  

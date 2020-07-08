@@ -8,10 +8,13 @@
   
   &__image
     align-self start
+  
+  &__right-block
+    width 617px
 
   &__text-section
-    width 617px
-    height 110px
+    width 100%
+    min-height 110px
     background whiteColor
     border-radius 10px
     padding-top 33px
@@ -21,6 +24,7 @@
 
     &--on
       min-height 334px
+      padding-bottom 34px
 
     &:first-child
       margin-bottom 13px
@@ -34,7 +38,6 @@
     padding-bottom 41px
   
   &__text
-    max-width 539px
     font-family GothamPro
     font-size 16px
     line-height 24px
@@ -58,4 +61,15 @@
       background hoverLinkColor url('../images/minus.svg') center no-repeat
 
   
-  
++below(md-breakpoint)
+  .about-us
+    .container
+      justify-content center
+    &__image
+      display none
+
++below(xs-breakpoint)
+  .about-us
+    &__title
+      font-size 14px
+      max-width 150px

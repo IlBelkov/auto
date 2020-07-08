@@ -19,7 +19,7 @@
 
   &__item
     width 330px
-    height 196px
+    min-height 196px
     background hoverLinkColor
     border-radius 5px
     padding-top 22px
@@ -139,9 +139,39 @@
     color whiteColor
     max-width 315px
 
++below(lg-breakpoint)
+  .recommendations
+    padding-top 150px
+
+    &__about-work
+      position relative
+      left 0
+      transform translateX(0)
+      top 0
+      margin-bottom 90px
+  .tips
+    &__flex-item:not(:last-child)
+      margin-right 10px
+
++below(md-breakpoint)
+  .tips
+    &__block-wrapper
+      flex-wrap wrap
+      justify-content center
 
 
++below(sm-breakpoint)
+  .about-work-cards
+    flex-wrap wrap
+    &__item
+      width 100%
+      &:nth-child(-n+2)
+        margin-right 0
+        margin-bottom 30px
 
+      &:before, &:after
+        display none
 
+ 
 
   

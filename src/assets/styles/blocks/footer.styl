@@ -52,3 +52,18 @@
   stroke footer
   width 11px
   height 11px
+
++below(sm-breakpoint)
+  .footer-menu
+    &__link
+      font-size 12px
+      line-height 0px
+
+      &:not(:last-child)
+        margin-right 21px
+
++below(xs-breakpoint)
+  .footer-menu
+    &__link
+      &:not(:last-child)
+        margin-right 11px

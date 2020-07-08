@@ -11,6 +11,11 @@
   left 50%
   transform translateX(-50%)
   top -49px
+  width 430px
+
+  &__slider-item
+    width 430px
+    height 115px
 
   &__icon
     stroke hoverLinkColor
@@ -46,7 +51,7 @@
     width 584px
   
   &__total-data
-    margin-top 36px
+    margin-top 43px
 
 .profile
   display flex
@@ -66,6 +71,7 @@
     font-size 12px
     line-height 19px
     color labelGray
+    margin-bottom 5px
   
   &__input
     background #FFFFFF
@@ -100,6 +106,10 @@
   &__button-request
     background hoverLinkColor
     color whiteColor
+  
+  &__cost-wrap
+    display flex
+    align-items center
 
 .section-menu
   display flex
@@ -115,6 +125,9 @@
      
   &__icon
     fill alpha(hoverLinkColor, 0.5)
+
+    &:hover
+      cursor pointer
 
 .gear, .chassis
   width 26px
@@ -135,14 +148,14 @@
 .selection-section
   &__section-wrap
     width 100%
-    height 403px
+    min-height 403px
     background whiteColor
     box-sizing border-box
     box-shadow 0px 4px 4px rgba(0, 0, 0, 0.25)
     border-radius 10px
     padding 46px 56px 104px 56px
   
-  &__section-header
+  &__header
     display flex
     justify-content space-between
     align-items center
@@ -164,29 +177,51 @@
     color alpha(smallTitle,0.3)
   
   &__item-wrap
-    width 230px
-    height 46px
-    background rgba(223, 237, 254, 0.3)
-    border 1.5px solid hoverLinkColor
-    border-radius 30px
     position relative
-    padding-left 21px
+    width 230px
 
     &:nth-child(-n+4)
       margin-bottom 16px
   
   &__input
     display none
+
+    &:checked + label 
+      background hoverLinkColor
+      color whiteColor
+      &:before
+        display block
   
   &__label
+    width 100%
+    height 46px
+    background rgba(223, 237, 254, 0.3)
+    border 1.5px solid hoverLinkColor
     font-family GothamPro
     font-size 18px
     line-height 17px
     color hoverLinkColor
-    position absolute
-    top 50%
-    transform translateY(-50%)
-    width 100%
+    display inline-block
+    box-sizing border-box 
+    border-radius 30px
+    padding-top 13px
+    padding-left 21px
+    position relative
+
+    &:hover
+      cursor pointer
+
+    &:before
+      position absolute
+      content ''
+      background url(../images/Vector.png) center no-repeat
+      top 50%
+      transform translateY(-50%)
+      right 19px
+      display none
+      width 13px
+      height 13px
+
   
   &__section-select
     display flex
@@ -207,6 +242,10 @@
     color smallTitle
     position relative
     margin-left 30px
+
+    &:hover
+      cursor pointer
+      text-decoration underline
 
     &:before
       position absolute
@@ -230,6 +269,9 @@
   border-radius 32px
   position relative
 
+  &:hover
+    cursor pointer
+
   &:after 
     width 14px
     height 15px
@@ -238,7 +280,7 @@
     transform translate(-50%,-50%)
     position absolute
     z-index 1
-    background url('../images/arrow.svg') center no-repeat
+    background url('../images/arrow.png') center no-repeat
     content ""
 
   &:last-child
@@ -266,8 +308,47 @@
       flex-basis 100%
       margin-bottom 50px
 
-
-
 // +below(md-breakpoint)
-// +below(sm-breakpoint)
-// +below(xs-breakpoint)
++below(sm-breakpoint)
+  .selection-section
+
+    &__section-select
+      justify-content center
+    &__item-wrap
+      width 100%
+      margin-bottom 16px
+
++below(xs-breakpoint)
+
+  .form
+    &__title
+      text-align center
+
+  .profile
+    flex-wrap wrap
+    justify-content center
+
+    &__phone-wrap
+      margin-bottom 20px
+      margin-right 0
+  
+  .total-data
+    flex-wrap wrap
+    justify-content center
+
+    &__cost-wrap
+      flex-basis 100%
+      justify-content center
+      margin-bottom 20px
+  
+  .selection-section
+    &__header
+      flex-wrap wrap
+    &__input
+      &:checked + label 
+        &:before
+          display none
+    &__label
+      padding-left 11px
+  
+  

@@ -18,9 +18,23 @@
     margin-bottom 32px
 
   &__text
-    width 329px
+    max-width 329px
     font-family GothamPro
     font-size 14px
     line-height 25px
     color captionColor
 
++below(lg-breakpoint)
+  .list-about
+    .container
+      justify-content center 
+      padding-bottom 150px
+    
+    &__block:nth-child(odd)
+      margin-right 10px
+
++below(sm-breakpoint)
+  .list-about
+    
+    &__block:not(:last-child)
+      margin-bottom 91px
