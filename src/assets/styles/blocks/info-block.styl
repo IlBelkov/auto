@@ -31,8 +31,17 @@
     line-height 30px
     color captionColor
 
-+below(sm-breakpoint)
++below(md-breakpoint)
   .section-info
     flex-wrap wrap
     justify-content center
+
+    &__image-wrap
+      order 2
+      margin-top 40px
+  
+  .info-block
+    &__section-info:not(:last-child)
+      margin-bottom 60px
+
 
